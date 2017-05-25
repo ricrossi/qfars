@@ -1,0 +1,79 @@
+---
+title: "FARStraining"
+author: "Riccardo L. Rossi"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARStraining}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The FARStraining package provides functions to query the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. 
+The FARStraining package is - obviously - a training package, thus it merely is an exercise in building up the structure of an R package and you're not probably going to need it!...)
+
+## How to read the data
+
+Data can be read using the "fars_read" function. This function takes as only argument a filename and first check if the inputted filename exists. If the file does not exist in current working directory an error message is given, otherwise a connection to the file is created.
+
+To read the content of the "accident_2013.csv.bz2" file and to store its content into the acc2013 object:
+
+```{r, eval=FALSE}
+acc2013 <- fars_read("accident_2013.csv.bz2")
+```
+
+We are probably interested in a specific year: the filename relative to a specified year is cntructed according to FARS standard naming conventions. The "make_filename" command takes as argument a four digit number indicating a year to show the complete filename for that year.
+For example, the full name for the year 2014 is obtained as follows:
+
+```{r eval=FALSE}
+make_filename(2014)
+```
+
+We can also read more than one file at once. Guess you want to assess how many accidents are registered for the years 2013 and 2015: we can use the "fars_read_years" command:
+
+```{r eval=FALSE}
+multi_years <- fars_read_years(list(2013, 2015))
+```
+
+## Summarizing and displaying data by months and years
+
+The obtained "multi_years" object is a list of dataframes, one for yeach specified year.
+This function is internally used by the more useful summarize function, used to return a tabular display for the accidents occurred in a specific year, or a series of years, chopped down for each month.
+
+To retrieve the summary for 2013 you can do:
+
+```{r eval=FALSE}
+summary2013 <- fars_summarize_years(2013)
+```
+
+To retrieve the summary for more than a single year the list of years must be used as the function's argument:
+
+```{r eval=FALSE}
+summary2013_2015 <- fars_summarize_years(list(2013, 2015))
+```
+
+## Further geographical visualization of data
+
+Data in the FARS database can also be visualized in their spatial distribution using maps overlays. the "fars_map_state" function exactly does this. Every State of the United States of America is identified by its numerical code. To print a density map for accidents in 2014 in California (State #06), the command is as follows:
+
+```{r eval=FALSE}
+fars_map_state(06, 2014)
+```
+
+
+## Figures
+
+The figure sizes have been customised so that you can easily put two images side-by-side. 
+
+```{r, fig.show='hold'}
+plot(1:10)
+plot(10:1)
+```
+
+You can enable figure captions by `fig_caption: yes` in YAML:
+
+    output:
+      rmarkdown::html_vignette:
+        fig_caption: yes
+
+Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
