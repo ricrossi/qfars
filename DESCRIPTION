@@ -1,7 +1,7 @@
 Package: qfars
 Type: Package
 Title: The qfars Training Pack
-Import: dplyr, readr, tidyr, maps
+Import: dplyr, readr, tidyr, maps, magrittr
 Version: 0.1.0
 Author: Ric Rossi
 Maintainer: Ric Rossi <ric.rossi@gmail.com>

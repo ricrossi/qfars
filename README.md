@@ -1,6 +1,6 @@
 # The qfars training in building R packages
 
-This package provides functions to query the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System.
+This package provides functions to query the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (data are a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes).
 This is only a "training"" package, thus it merely is an exercise in building up the structure of an R package: you will not probably need it, but
 
 ## Getting Started
