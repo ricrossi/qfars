@@ -9,7 +9,7 @@ fars_map_state(state.num, year)
 \arguments{
 \item{state.num}{The State ID number (from 1 to 56) for the State to be queried}
 
-\item{years}{A four digit number of the year the accidents need to be extracted for}
+\item{year}{A four digit number of the year the accidents need to be extracted for}
 }
 \value{
 This function prints a map of the specified State with dots for each documented accident
