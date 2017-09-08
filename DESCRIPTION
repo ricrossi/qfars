@@ -1,7 +1,7 @@
 Package: qfars
 Type: Package
 Title: The qfars Training Pack
-Import: dplyr, readr, tidyr, maps, magrittr
+Imports: dplyr, readr, tidyr, maps, magrittr
 Version: 0.1.0
 Author: Ric Rossi
 Maintainer: Ric Rossi <ric.rossi@gmail.com>
@@ -9,7 +9,6 @@ Description: A set of function to explore data of the U.S qfars
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
-Suggests: knitr,
-    rmarkdown
+Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
