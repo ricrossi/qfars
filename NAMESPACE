@@ -3,6 +3,3 @@ export("fars_read_years")
 export("make_filename")
 export("fars_summarize_years")
 export("fars_map_state")
-
-importFrom("magrittr", "%>%")
-importFrom("readr", "read_csv")
