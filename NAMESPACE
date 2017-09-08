@@ -1,1 +1,8 @@
-exportPattern("^[[:alpha:]]+")
+export("fars_read")
+export("fars_read_years")
+export("make_filename")
+expott("fars_summarize_years")
+export("fars_map_state")
+
+importFrom("magrittr", "%>%")
+importFrom("readr", "read_csv")
