@@ -1,6 +1,6 @@
 # The qfars training in building R packages
 
-![Build Status](https://travis-ci.org/ricrossi/qfars.svg?branch=master)
+[<img src="https://travis-ci.org/ricrossi/qfars.svg?branch=master">](https://travis-ci.org/ricrossi/qfars)
 
 ## Description
 
