@@ -1,3 +1,8 @@
+import("dplyr")
+import("readr")
+import("tidyr")
+import("maps")
+
 export("fars_read")
 export("fars_read_years")
 export("make_filename")
