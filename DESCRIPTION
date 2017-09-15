@@ -5,7 +5,7 @@ Imports: dplyr, readr, tidyr, maps, magrittr
 Version: 0.1.0
 Author: Ric Rossi
 Maintainer: Ric Rossi <ric.rossi@gmail.com>
-Description: A set of function to explore data of the US accident records
+Description: A package implementing a set of function to query data of the car cracsh records.
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
